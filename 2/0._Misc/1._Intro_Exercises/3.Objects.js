@@ -43,9 +43,9 @@ const thisSong = {"description": "The best song in the world."}
 
 delete thisSong.description;
 
-    thisSong.new = " Just a tribute. " 
+    thisSong.about = " Just a tribute. " 
 
-    console.log(thisSong.new)
+    console.log(thisSong.about)
 
 // --------------------------------------
 

@@ -15,11 +15,24 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
-friends[0] = "Frank";
-friends[1] = "Freddie";
-friends[2] = "Abdi";
+const jamie = {
+    name: "Jamie",
+    age: 30
+}
 
-console.log(friends);
+const bob = {
+    name: "Bob",
+    age: 28
+}
+
+const frank = {
+    name: "Frank",
+    age: 21
+}
+
+friends.push(jamie, bob, frank)
+
+console.log(friends)
 
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 

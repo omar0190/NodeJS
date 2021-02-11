@@ -8,9 +8,7 @@ const myObj = {"message": "Hello, earthling! I bring peace."};
 
 // Log the message 
 
-let val = myObj.message;
-
-console.log(val)
+console.log(myObj.message)
 
 // --------------------------------------
 // Exercise 2 - Defining an object. 

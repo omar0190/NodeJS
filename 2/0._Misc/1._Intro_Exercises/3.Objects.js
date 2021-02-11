@@ -15,7 +15,7 @@ console.log(myObj.message)
 
 const myObj1 = {
     name: "Omar",
-    age: 23
+    age: 22
 }
 console.log(myObj1);
 

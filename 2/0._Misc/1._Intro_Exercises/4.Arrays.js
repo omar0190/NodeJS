@@ -6,6 +6,7 @@
 const letters = ["a","b","c"];
 // show b in the console 
 
+console.log(letters[1]);
 
 // --------------------------------------
 // Exercise 2 - Array Positioning
@@ -14,6 +15,11 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
+friends[0] = "Frank";
+friends[1] = "Freddie";
+friends[2] = "Abdi";
+
+console.log(friends);
 
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
@@ -23,6 +29,7 @@ const significantMathNumbers = [0, 2.718, 3.14159, 1729];
 // You want to programmatically find where the number 1729 is in the array.
 // programmatically means that no finger counting allowed. There is a method for this (finding index based of value). 
 
+console.log(significantMathNumbers.indexOf(1729));
 
 // --------------------------------------
 // Exercise 4 - Inserting elements
@@ -31,7 +38,9 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 // You are a programmer. In one line (one statement) insert hamburger, soda and pizza between the elements cucumber and rocket
 
+diet.splice(2, 0, "hamburger", "soda", "pizza");
 
+console.log(diet);
 
 
 // --------------------------------------

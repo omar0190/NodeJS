@@ -63,6 +63,7 @@ console.log(diet);
 // Don't remove by index. You know in advance that it's the last in the array because you are too full already. 
 
 
+diet.pop();
 
 
 
@@ -71,7 +72,7 @@ console.log(diet);
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
-
+const dinnerTray = diet.slice();
 
 // --------------------------------------
 // Exercise 7 - For loop
@@ -80,6 +81,9 @@ const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
+for(let i = 1; i < lettersExpanded.length; i = i + 2){
+    console.log(lettersExpanded[i]);
+}
 
 
 // --------------------------------------
@@ -94,4 +98,13 @@ const discardedNumbers = [];
 
 // --------------------------------------
 
+for(let i = 0; i < numbers.length; i++){
+    if(numbers[i] > 6 || numbers[i] < 0){
+        console.log(numbers[i]);
+    }
+    else{
+        discardedNumbers.push(numbers[i]);
+    }
+    }
 
+console.log(discardedNumbers);

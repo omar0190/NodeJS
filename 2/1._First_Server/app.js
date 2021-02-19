@@ -1,13 +1,21 @@
-const express = require("express");
+const express = require("express")
+
 const app = express();
+//const app = require(express)();
 
-app.get("/", (req, res) => {
-    res.send ({message: "First call to /"});
-});
+app.get('/', (req, res) => {
+    res.send({
 
-app.get("/anotherpath/id", (req, res) => {
-    res.send({data: "some other things"});
-});
+    })
+})
+
+app.get('/me', (req, res) => {
+    res.send({
+        "firstName": "Omar",
+        "lastName": "Atik",
+        "age": 22
+    })
+})
 
 app.listen(8080);
-
+console.log("Server running on PORT 8080")

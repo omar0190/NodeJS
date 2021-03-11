@@ -53,4 +53,22 @@ let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 //console.log(days[day -1])
 //console.log(months[month])
 //console.log
+
+//create a route called about that serves a hardcoded version number in a string
+
+app.get("/about", (req,res) => {
+    res.send({
+        version: "1.0.0"
+    });
+});
+
+//Try to send a header tag
+app.get("/page", (req,res) => {
+    res.send("<h1> hello </h1>")
+});
+
+
+
 app.listen(8080)
+
+

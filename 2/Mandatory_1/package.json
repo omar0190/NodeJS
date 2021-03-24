@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "start": "node app.js",
+        "start-dev": "set PORT=3000 && nodemon app.js"
+      },
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.7"
+    }
+}

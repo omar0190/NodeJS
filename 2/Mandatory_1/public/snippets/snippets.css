@@ -1,0 +1,12 @@
+body{
+    background-color: lightgray;
+  }
+
+  pcode{
+      color: green;
+      font-size: smaller;
+  }
+
+  p{
+      font-size: smaller;
+  }      

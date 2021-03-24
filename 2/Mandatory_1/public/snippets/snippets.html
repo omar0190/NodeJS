@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./snippets.css"> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <title>Code & Tools</title>
+   
+    </head>
+
+    
+    
+
+  <body  style="background-color: lightgray;">
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/terminal">Terminal Commands</a>
+        <a class="navbar-brand" href="/snippets">Code & Tools</a>
+        <a class="navbar-brand" href="/urlanatomy">Url Anatomy</a>
+      </div>
+    </nav>
+   
+    <div class="container">
+
+      
+      <br>
+    <h3>Code & Tools</h3>  
+
+    <div>
+      <h6>Functions</h6>
+      <p>Functions are first class citizens in Node's JavaScript, similar to the browser's JavaScript. A function can have attributes and properties also. It can be treated like a class in JavaScript.</p>
+      <pcode>function myFirstFunction(){
+          return "My first Greeting"}
+      </pcode>
+  </div>
+
+  <div>
+      <h6>Callback functions</h6>
+      <p>Callback function is a frequent use in Nodejs. An example of this would be for you as a user to view this page:</p>
+      <pcode>app.get("/snippets", (req, res) => { res.sendFile(__dirname + "/directory/snippets/snippets.html"); });</pcode>
+      <p>A callback function is a function which is accessible by another function and is invoked after the first function, if that function completes.</p>
+  </div>
+
+  <div>
+      <h6>Loops</h6>
+      <p>In javaScript we should avoid for-loops and loops used in other languages
+          We aim to to use functional approaches when looping
+          Like map, filter, reduce, find etc.
+          </p>
+  </div>
+
+  <div>
+      <h6>HTTP Methods</h6>
+      <p>In Nodejs multiple HTTP Methods were used throughout the first half of this semester. We've learned about CRUD.</p>
+      <p>Create (POST) - Make something</p>
+          <p>Read (GET)- Get something</p>
+          <p>Update (PATCH) - Change something</p>
+          <p>Delete (DELETE)- Remove something</p>
+          <p>in order to get these different methods to work. we use a callback function: EXAMPLE:</p>
+          <pcode>app.patch("/anime_names/:id", (req, res) => { <br>
+              animeNames = animeNames.map(animeName => { <br>
+                  if (animeName.id === Number(req.params.id)) { <br>
+                      return { ...animeName, ...req.body, id: animeName.id }; <br>
+                  } <br>
+                  return animeName; <br>
+              }); <br>
+              res.send({ data: wasUpdated }); <br>
+          });</pcode>          
+  </div>
+
+  <div>
+    <h6>Strict</h6>
+    <p>
+      The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.
+    </p>
+  </div>
+
+  <div>
+    <h6>Scopes</h6>
+    <p>Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: Global variables are those declared outside of a block. Local variables are those declared inside of a block</p>
+    <pcode>{
+      This is a new scope
+      let scopedVariable = "abc"; <br>
+      { <br>
+          scopedVariable = 123; <br>
+          This is a nested scope that inherits from the previous scope <br>
+      } <br>
+       }
+    </pcode>
+  </div>
+
+  <div>
+    <h6>Filter example</h6>
+    <pcode>
+      app.delete("/anime_names/:id", (req, res) => { <br>
+        animeNames = animeNames.filter(animeName => animeName.id !== Number(req.params.id)); <br>
+        res.send({ data: animeNames }); <br>
+    });
+    <br>
+    </pcode>
+    <p>This is a filter example. One can see that this example is also implemented in the callbackfunction. Filter runs through all objects and compares all id's with the selected id with help from request-parameters</p>
+  </div>
+
+  </div>
+  </body>
+</html>

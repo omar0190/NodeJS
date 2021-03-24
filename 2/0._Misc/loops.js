@@ -1,4 +1,4 @@
-// In javaScript we should avoid for loops and loops used in other languages
+// In javaScript we should avoid for-loops and loops used in other languages
 // We aim to to use functional approaches when looping
 // Like map, filter, reduce, find etc.
 

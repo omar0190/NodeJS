@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Cloudflare-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+    
+    <title>Mandatory Home</title>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/terminal">Terminal Commands</a>
+          <a class="navbar-brand" href="/snippets">Code & tools</a>
+          <a class="navbar-brand" href="/urlanatomy">Url Anatomy</a>
+        </div>
+      </nav>
+  </head>
+  <body>
+
+    <div1>
+      <h6>Press me for a nice surprise</h6>
+    <img id="imgtab" class='small' src="https://preview.redd.it/7feqjowmw5s41.png?auto=webp&s=1d7e68e818692869621af9edd742a2d861755606">
+    </div1>
+    
+       
+    <!--Jquery-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+  
+
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    var small={width: "35px",height: "35px"};
+    var large={width: "1150px",height: "490px"};
+    var count=1; 
+    $("#imgtab").css(small).on('click',function () { 
+        $(this).animate((count==1)?large:small);
+        count = 1-count;
+    });
+});
+</script>

@@ -1,10 +1,12 @@
 const router = require("express").Router();
 
 router.post("/api/contact", (req, res) => {
-    // todo send email
-    res.redirect("/")
+    
+    console.log(req.body);
+    res.redirect("/contacts")
 });
+
 
 module.exports = {
     router
-};
+}

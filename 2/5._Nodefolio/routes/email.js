@@ -1,25 +1,18 @@
 var router = require("express").Router();
 var nodemailer =  require("nodemailer");
 
-
-
-
-
-
-
 var transporter = nodemailer.createTransport({
     service: "gmail",
      auth: {
-            user: 'testeskea@gmail.com',
-            pass: "kea12345"
+            user: env.EMAIL,
+            pass: env.PASSWORD
         }
     });
 
-    
 
     router.post("/sent", (req, res) => {
         var mailOptions = {
-            from: 'testeskea@gmail.com',
+            from: env.EMAIL,
             to: req.body.email,
             subject: req.body.subject,
             text: req.body.message
@@ -35,8 +28,6 @@ var transporter = nodemailer.createTransport({
 
         res.redirect("/contacts");
     });
-
-   
 
 
 module.exports = {

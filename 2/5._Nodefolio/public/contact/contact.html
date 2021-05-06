@@ -1,23 +1,39 @@
-<div>
-    <p>Email</p>
-    <p>Phone number</p>
-    <p>Social Media Widgets</p>
-</div>
-<br><br>
+<div id="contact" class="w-50 mx-auto mt-5 mb-5">
 
+    <div class="post-heading text-center">
+      <h3 class="display-4 font-weight-bold">Contact me</h3>
+      <hr class="w-50 mx-auto mb-5">
+    </div>
 
-<form method="POST" action="/api/contact">
-    <label>Name</label>
-    <input name="name" placeholder="Name">
+    <form action="/sent" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" class="form-control" name="name" id="name" required placeholder="Enter Name">
+      </div>
 
-    <label>Email</label>
-    <input type="email" name="email" placeholder="Email">
+      <br>
 
-    <label>Subject</label>
-    <input name="subject" placeholder="Subject">
+      <div class="form-group">
+        <label for="Email">Email address:</label>
+        <input type="text" class="form-control" name="email" id="email" required  placeholder="Enter email">
+      </div>
 
-    <label>Message</label>
-    <textarea name="message" placeholder="message" rows="15" cols="50"></textarea>
+      <br>
 
-    <button type="submit">Contact Me!</button>
-</form>
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" class="form-control" name="subject" id="subject" required placeholder="Enter subject">
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <label for="message">Your message:</label>
+        <textarea class="form-control" name="message" id="message" required placeholder="Enter message..."></textarea>
+      </div>
+
+      <br>
+     
+      <button type="submit" class="btn btn-dark">Sent</button>
+    </form>
+  </div>

@@ -87,6 +87,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-padding-64 w3-content" id="photos">
     <h2 class="w3-text-light-grey">My Projects</h2>
     <hr style="width:200px" class="w3-opacity">
+    <p>These are projects i have been apart of or currently struggling with.</p>
 
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -120,17 +121,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+    <form action="/sent" method="POST" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="message"></p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
   <!-- End Contact Section -->
   </div>
   

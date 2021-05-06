@@ -5,10 +5,8 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const projectsRouter = require("./routes/projects.js");
 const contactRouter = require("./routes/contact.js");
 
-app.use(projectsRouter.router);
 app.use(contactRouter.router);
 
 const fs = require("fs");
